@@ -2,7 +2,7 @@ import axios from "axios";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
-axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = false;
 const api = axios.create({
   baseURL: "https://backendtest-3qxv.onrender.com/",
 });
