@@ -41,8 +41,8 @@ export default function SearchPage() {
         // fetch(`http://localhost:8000/questionnaire/?searchQ=${newParams}`)
         .then((response) => response.data)
         .then((data) => {
-          //console.log(data);
-          //console.log(productName, lastSearchParams);
+          console.log(data);
+          console.log(productName, lastSearchParams);
           const transformedData = JsonToAtom(data);
           setAllProduct(transformedData);
           checkSearchQ(productName);
