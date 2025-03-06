@@ -26,11 +26,11 @@ export default function SearchPage() {
   const brandReputation = searchParams.get("brandReputation");
   const [lastSearchParams, checkSearchQ] = useAtom(prevSearchParams);
   console.log("productName", productName);
-  //console.log("priceFactor", priceFactor);
-  //console.log("customerReview", customerReview);
-  //console.log("shipping", shipping);
-  //console.log("returnPolicy", returnPolicy);
-  //console.log("brandReputation", brandReputation);
+  console.log("priceFactor", priceFactor);
+  console.log("customerReview", customerReview);
+  console.log("shipping", shipping);
+  console.log("returnPolicy", returnPolicy);
+  console.log("brandReputation", brandReputation);
 
   useEffect(() => {
     if (productName !== lastSearchParams && productName !== null) {
@@ -50,6 +50,8 @@ export default function SearchPage() {
         .catch((error) => {
           console.error("Error fetching questions:", error);
         });
+    } else {
+      console.log(productName !== lastSearchParams, productName !== null);
     }
   }, [productName, lastSearchParams]);
 
