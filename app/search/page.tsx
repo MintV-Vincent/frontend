@@ -31,6 +31,12 @@ export default function SearchPage() {
   console.log("shipping", shipping);
   console.log("returnPolicy", returnPolicy);
   console.log("brandReputation", brandReputation);
+  console.log(
+    productName !== lastSearchParams,
+    productName !== null,
+    lastSearchParams,
+    productName
+  );
 
   useEffect(() => {
     if (productName !== lastSearchParams && productName !== null) {
@@ -50,8 +56,6 @@ export default function SearchPage() {
         .catch((error) => {
           console.error("Error fetching questions:", error);
         });
-    } else {
-      console.log(productName !== lastSearchParams, productName !== null);
     }
   }, [productName, lastSearchParams]);
 
