@@ -25,7 +25,7 @@ export default function SearchPage() {
   const returnPolicy = searchParams.get("returnPolicy");
   const brandReputation = searchParams.get("brandReputation");
   const [lastSearchParams, checkSearchQ] = useAtom(prevSearchParams);
-  //console.log("productName", productName);
+  console.log("productName", productName);
   //console.log("priceFactor", priceFactor);
   //console.log("customerReview", customerReview);
   //console.log("shipping", shipping);
