@@ -7,7 +7,6 @@ export function PictureComp({ id, src, print, button, height }: any) {
 
   const deleteItem = () => {
     setCheckedAtom((checkedList) => {
-      console.log(print);
       if (checkedList.includes(id)) {
         return checkedList.filter((item) => item !== id);
       } else {

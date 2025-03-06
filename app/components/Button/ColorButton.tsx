@@ -13,7 +13,6 @@ function ColourButton() {
   useEffect(() => {
     const initialTheme = localStorage.getItem("theme") || "";
     document.documentElement.setAttribute("data-theme", initialTheme);
-    console.log("Initial theme applied:", initialTheme);
   }, []);
 
   const toggleTheme = () => {

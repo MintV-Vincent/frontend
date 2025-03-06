@@ -13,7 +13,6 @@ function DarkButton() {
   useEffect(() => {
     const initialTheme = localStorage.getItem("theme") || "";
     document.documentElement.setAttribute("data-theme", initialTheme);
-    console.log("Initial theme applied:", initialTheme);
   }, []);
 
   const toggleTheme = () => {
@@ -22,8 +21,6 @@ function DarkButton() {
 
     localStorage.setItem("theme", newTheme);
     document.documentElement.setAttribute("data-theme", newTheme);
-
-    console.log("Theme toggled to:", newTheme);
   };
 
   return (

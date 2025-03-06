@@ -35,7 +35,6 @@ export function HorizontalSelectBar() {
   const [scrollIndex, setScrollIndex] = useState(0);
 
   const scrollRight = () => {
-    console.log(selectedProducts.length);
     if ((scrollIndex + 1) * fixedLength < selectedProducts.length + 1) {
       setScrollIndex(scrollIndex + 1);
     }
