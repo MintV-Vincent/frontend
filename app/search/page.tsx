@@ -25,12 +25,12 @@ export default function SearchPage() {
   const returnPolicy = searchParams.get("returnPolicy");
   const brandReputation = searchParams.get("brandReputation");
   const [lastSearchParams, checkSearchQ] = useAtom(prevSearchParams);
-  console.log("productName", productName);
-  console.log("priceFactor", priceFactor);
-  console.log("customerReview", customerReview);
-  console.log("shipping", shipping);
-  console.log("returnPolicy", returnPolicy);
-  console.log("brandReputation", brandReputation);
+  //console.log("productName", productName);
+  //console.log("priceFactor", priceFactor);
+  //console.log("customerReview", customerReview);
+  //console.log("shipping", shipping);
+  //console.log("returnPolicy", returnPolicy);
+  //console.log("brandReputation", brandReputation);
 
   useEffect(() => {
     if (productName !== lastSearchParams && productName !== null) {
@@ -41,8 +41,8 @@ export default function SearchPage() {
         // fetch(`http://localhost:8000/questionnaire/?searchQ=${newParams}`)
         .then((response) => response.data)
         .then((data) => {
-          console.log(data);
-          console.log(productName, lastSearchParams);
+          //console.log(data);
+          //console.log(productName, lastSearchParams);
           const transformedData = JsonToAtom(data);
           setAllProduct(transformedData);
           checkSearchQ(productName);
